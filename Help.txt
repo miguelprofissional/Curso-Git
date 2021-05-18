@@ -12,18 +12,18 @@ dentro da pasta .gitignore, nesse caso NÃO SERÃO adicionados em um repositóri
 Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios
 que devem ser ignorados apenas para o repositório específico.
 
-Para alternar entre um branch e outro é necessário fazer o commit das alterações atuais 
-para depois trocar para um outro branch. Se existir a necessidade de realizar a troca 
-sem fazer o commit é possível criar um stash. O Stash como se fosse um branch temporário 
+Para alternar entre um BRANCH e outro é necessário fazer o COMMIT das alterações atuais 
+para depois trocar para um outro BRANCH. Se existir a necessidade de realizar a troca 
+sem fazer o COMMIT é possível criar um STASH. O STASH como se fosse um BRANCH temporário 
 que contem apenas as alterações ainda não commitadas.
 
-Para realizar o merge, é necessário estar no branch que deverá receber as alterações. 
-O merge pode automático ou manual. O merge automático será feito em arquivos textos que 
-não sofreram alterações nas mesmas linhas, já o merge manual será feito em arquivos textos 
+Para realizar o MERGE, é necessário estar no BRANCH que deverá receber as alterações. 
+O MERGE pode automático ou manual. O MERGE automático será feito em arquivos textos que 
+não sofreram alterações nas mesmas linhas, já o MERGE manual será feito em arquivos textos 
 que sofreram alterações nas mesmas linhas.
 
-O primeiro push de um repositório deve conter o nome do repositório remoto e o branch.
-Os demais pushes não precisam dessa informação
+O primeiro PUSH de um repositório deve conter o nome do repositório remoto e o BRANCH.
+Os demais PUSH não precisam dessa informação
 
 
 
@@ -50,10 +50,10 @@ git config --global core.excludesfile ~/.gitignore
 Listar configurações
 git config --list
 
-Clonar um repositório remoto já existente
+Clonar repositório remoto
 git clone git@github.com:digite_o_nome_do_usuario_git_aqui/digite_o_nome_do_diretorio_remoto.git
 
-Criar novo repositório Local
+Criar repositório Local
 git init
 
 Verificar estado dos arquivos/diretórios
@@ -104,6 +104,7 @@ Listar branches que não foram fundidos (merged) com o master
 git branch --no-merged
 
 Criando branch no repositório remoto
+
 Criando um branch remoto com o mesmo nome
 git push origin bug-123
 
@@ -115,7 +116,6 @@ git checkout -b bug-123 origin/bug-123
 
 Apagar branch remoto
 git push origin:bug-123
-
 
 Voltar para o branch principal (master)
 git checkout master
@@ -143,24 +143,16 @@ git log --stat
 
 Exibir informações resumidas em uma linha (hash completa e comentário)
 git log --pretty=oneline
-Verifique as demais opções de formatação no Git Book
 
 git log --graph
 
+Verifique as demais opções de formatação no Git Book
 
-git PULL
-git pull é usado para buscar e baixar conteúdo de repositórios remotos 
-e fazer a atualização imediata ao repositório local para que os conteúdos sejam iguais
+git PULL é usado para buscar e baixar conteúdo de repositórios remotos 
+git pull
 
-git PUSH
-git push
+git PUSH envia conteúdo do repositório local para um repositório remoto. 
 git push -u origin master
-Enviar conteúdo do repositório local para um repositório remoto. 
-"Push" é como os commits do repositório local são enviados a um repositório remoto
-
-
-
-
 
 
 Exibir os repositórios remotos
@@ -177,27 +169,21 @@ Renomear um repositório remoto
 git remote rename origin curso-git
 
 Desvincular um repositório remoto
-git remote rm curso-git
+git remote rm meu_repositorio
 
-Remover arquivo/diretório
+Remover arquivo
 git rm meu_arquivo.txt
 
 Remover diretório
-git rm -r diretorio
-
-A alteração do diretório pode ser realizada através do comando abaixo:
-git checkout
-
+git rm -r meu_diretorio
 
 Desfazendo alteração local (modified)
 git checkout -- meu_arquivo.txt
 Este comando deve ser utilizando enquanto o arquivo NÃO foi adicionado na staged area.
 
 Desfazendo alteração local (staged)
+git reset HEAD meu_arquivo.txt
 Este comando deve ser utilizando quando o arquivo JÁ FOI adicionado na staged area.
-
-
-
 
 Alterando mensagens de commit
 git commit --amend -m "Minha nova mensagem"
@@ -214,26 +200,23 @@ Altere para edit os commits que deseja realizar alterações.
 edit f7f3f6d changed my name a bit
 pick 310154e updated README formatting and added blame
 pick a5f4a0d added catfile
+
 Feche o editor de texto.
 
 Digite o comando para alterar a mensagem do commit que foi marcado como edit.
+git commit --amend -m "Minha nova mensagem"
 
-git commit –amend -m “Nova mensagem”
 Aplique a alteração
 
 git rebase --continue
-Atenção: É possível alterar a ordem dos commits ou remover um commit apenas mudando as linhas ou removendo.
+Atenção: É possível alterar a ordem dos commits ou remover um commit apenas mudando as linhas 
+ou removendo.
 
 git rebase master
 Fazendo o rebase entre o nome_branch e o master.
 
-Juntando vários commits
-Seguir os mesmos passos acima, porém marcar os commtis que devem ser juntados com *squash
-
 Remover todo histórico de um arquivo
 git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
-
-git fetch
 
 Tags
 Criando uma tag leve
@@ -244,7 +227,6 @@ git tag -a vs-1.1 -m "Minha versão 1.1"
 
 Criando uma tag assinada
 Para criar uma tag assinada é necessário uma chave privada (GNU Privacy Guard - GPG).
-
 git tag -s vs-1.1 -m "Minha tag assinada 1.1"
 
 Criando tag a partir de um commit (hash)
@@ -273,5 +255,6 @@ Criar um branch a partir de um stash
 git stash branch meu_branch
 
 
-
+git fetch
+git squash
 
