@@ -81,12 +81,14 @@ O MASTER é o branch principal do GIT.
 O HEAD é um ponteiro especial que indica qual é o branch atual. 
 Por padrão, o HEAD aponta para o branch principal, o master.
 
-Trocando para um branch existente
-git checkout nome_branch
-Neste caso, o ponteiro principal HEAD esta apontando para o branch chamada nome_branch
+
 
 Criar um novo branch e trocar
 git checkout -b nome_branch
+
+Trocando para um branch existente
+git checkout nome_branch
+Neste caso, o ponteiro principal HEAD esta apontando para o branch chamada nome_branch
 
 Apagando um branch
 git branch -d bug-123
@@ -191,11 +193,14 @@ git commit --amend -m "Minha nova mensagem"
 Alterando os três últimos commits
 git rebase -i HEAD~3
 O editor de texto será aberto com as linhas representando os três últimos commits.
+Altere para edit (Substituir pick p/ edit) os commits que deseja realizar alterações.
+É possível alterar a ordem dos commits ou remover mudando as linhas 
+ou removendo.
 
 pick f7f3f6d changed my name a bit
 pick 310154e updated README formatting and added blame
 pick a5f4a0d added catfile
-Altere para edit os commits que deseja realizar alterações.
+
 
 edit f7f3f6d changed my name a bit
 pick 310154e updated README formatting and added blame
@@ -209,8 +214,6 @@ git commit --amend -m "Minha nova mensagem"
 Aplique a alteração
 
 git rebase --continue
-Atenção: É possível alterar a ordem dos commits ou remover um commit apenas mudando as linhas 
-ou removendo.
 
 git rebase master
 Fazendo o rebase entre o nome_branch e o master.
