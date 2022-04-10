@@ -1,0 +1,1 @@
+Aula 06 - Curso GIT e GITHUB - Enviando um projeto local para o GITHUB - Criando o primeiro repositório remoto

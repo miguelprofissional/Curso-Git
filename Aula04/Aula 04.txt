@@ -1,0 +1,6 @@
+Aula04 - Curso GIT e GITHUB - Rastreando e recuperando versões anteriores do projeto (checkout)
+
+Nesta aula você irá aprender a usar o GIT para controlar as versões do projeto, rastreando mudanças, 
+recuperando versões anteriores e também desfazer alterações.
+
+https://youtu.be/_mB-TShMDvY

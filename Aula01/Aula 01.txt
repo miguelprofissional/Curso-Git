@@ -1,0 +1,6 @@
+Aula01 - Curso GIT e GITHUB - O que é GIT? - O que é GitHub?
+
+Esta aula explica o que é GIT e o que é GITHUB e quais são as principais
+vantagens em aprender a usar este tipo de ferramenta.
+
+https://youtu.be/FF1f4bKYhoo

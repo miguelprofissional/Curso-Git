@@ -25,12 +25,24 @@ que sofreram alterações nas mesmas linhas.
 O primeiro PUSH de um repositório deve conter o nome do repositório remoto e o BRANCH.
 Os demais PUSH não precisam dessa informação
 
+O MASTER é o branch principal do GIT.
+O HEAD é um ponteiro especial que indica qual é o branch atual. 
+Por padrão, o HEAD aponta para o branch principal, o master.
 
+
+Criar repositório Local
+git init
+
+Visualizar  o estado atual do repositório e o Diretorio de Trabalho
+git status
 
 Estados
 Modificado 	(modified);
 Preparado 	(staged)
 Consolidado 	(comitted);
+
+Listar configurações
+git config --list
 
 Setar usuário
 git config --global user.name "Leonardo Comelli"
@@ -47,23 +59,14 @@ git config --global merge.tool vimdiff
 Setar arquivos a serem ignorados
 git config --global core.excludesfile ~/.gitignore
 
-Listar configurações
-git config --list
-
 Clonar repositório remoto
-git clone git@github.com:digite_o_nome_do_usuario_git_aqui/digite_o_nome_do_diretorio_remoto.git
-
-Criar repositório Local
-git init
-
-Verificar estado dos arquivos/diretórios
-git status
+git clone git@github.com:digite_o_nome_do_usuario_git_aqui/nome_do_diretorio_remoto.git
 
 Add um arquivo em específico
-git add meu_arquivo.txt
+git add nome_arquivo.txt
 
 Add um diretório em específico
-git add meu_diretorio
+git add nome_diretorio
 
 Add todos os arquivos/diretórios
 git add .	
@@ -71,27 +74,21 @@ git add .
 Add um arquivo que esta listado no .gitignore (geral ou do repositório)
 git add -f arquivo_no_gitignore.txt
 
-Visualizar  o estado atual do repositório e o Diretorio de Trabalho
-git status
-
 Criando um novo branch
 git branch nome_branch
 
-O MASTER é o branch principal do GIT.
-O HEAD é um ponteiro especial que indica qual é o branch atual. 
-Por padrão, o HEAD aponta para o branch principal, o master.
-
-
-
 Criar um novo branch e trocar
-git checkout -b nome_branch
+git branch-b nome_branch
 
 Trocando para um branch existente
 git checkout nome_branch
 Neste caso, o ponteiro principal HEAD esta apontando para o branch chamada nome_branch
 
 Apagando um branch
-git branch -d bug-123
+git branch -d nome_branch
+
+Criar um branch a partir de um stash
+git stash branch nome_branch
 
 Listar branches
 git branch -a
@@ -253,9 +250,6 @@ git stash apply
 Voltar para um stash específico
 git stash apply stash@{2}
 Onde 2 é o indíce do stash desejado.
-
-Criar um branch a partir de um stash
-git stash branch meu_branch
 
 
 git fetch

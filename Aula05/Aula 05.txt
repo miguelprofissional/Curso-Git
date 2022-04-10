@@ -1,0 +1,6 @@
+Aula05 - Curso GIT e GITHUB - Criando ramificações do projeto (branch e merge) e resolução de conflitos
+
+Nesta aula você irá aprender a criar ramificações de um projeto. 
+Esta aula também ensina a fazer a fusão das ramificações(merge) e resolver conflitos.
+
+https://youtu.be/iRs6sQOPcvg

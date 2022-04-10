@@ -1,0 +1,6 @@
+Aula02 - Como instalar e configurar o GIT no windows
+
+Nesta aula você irá aprender a instalar e configurar o GIT no Windows e também 
+aprender alguns comandos do bash (terminal).
+
+https://youtu.be/SOxafinthys

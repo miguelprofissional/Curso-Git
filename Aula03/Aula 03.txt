@@ -1,0 +1,6 @@
+Aula03 - Curso GIT e GITHUB - Comandos básicos
+
+Nesta aula você irá aprender os comandos fundamentais do GIT:
+git init, git status, git add, git commit e git log
+
+https://youtu.be/v8-4rI0cJXE
